@@ -1,12 +1,19 @@
 {
-    "title": "JavaScript Garden",
-    "langTitle": "JavaScript Garden in Japanese",
-    "description": "JavaScriptの奇妙さと欠陥についてのガイドライン",
+    "title": "Binary Editor BZ",
+    "langTitle": "Binary Editor BZ in Japanese",
+    "description": "Binary Editor BZのヘルプ",
     "sections": [
         {
-            "title": "前書き",
+            "title": "はじめに",
             "dir": "intro",
             "articles": []
+        },
+        {
+            "title": "基本操作",
+            "dir": "basic",
+            "articles": [
+                "cursor"
+            ]
         },
         {
             "title": "オブジェクト",
@@ -28,14 +35,6 @@
                 "arguments",
                 "constructors",
                 "scopes"
-            ]
-        },
-        {
-            "title": "配列",
-            "dir": "array",
-            "articles": [
-                "general",
-                "constructor"
             ]
         },
         {

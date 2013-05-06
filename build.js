@@ -1,7 +1,8 @@
 var fs = require('fs'),
     path = require('path'),
     jade = require('jade'),
-    md = require('node-markdown'),
+    //md = require('node-markdown'),
+    marked = require('marked'),
     Class = require('neko').Class;
 
 var format = new require('fomatto').Formatter();
@@ -92,9 +93,9 @@ var Garden = Class(function(options) {
     },
 
     parseArticle: function(text) {
-        var title = text.substring(0, text.indexOf('\n'));
+        var title = text.match(/^[^\r\n]*/).toString();//text.substring(0, text.indexOf('\n'));
         text = text.substring(title.length);
-        title = md.Markdown(title.replace(/\#/g, '').trim());
+        title = marked(title.replace(/\#/g, '').trim()).replace(/^[^>]+>|<[^<]+$/g, '');
         text = this.toMarkdown(text);
 
         var parts = text.split('<h3>');
@@ -105,14 +106,14 @@ var Garden = Class(function(options) {
         }
 
         return {
-            title: title.substring(3, title.length - 4),
+            title: title,
             text: text,
             subs: subs
         };
     },
 
     toMarkdown: function(text) {
-        text = md.Markdown(text).replace(/'/g,'&#39;');
+        text = /*md.Markdown*/marked(text).replace(/'/g,'&#39;');
         text = text.replace(/<blockquote>/g, '<aside>').
                     replace(/<\/blockquote>/g, '</aside>');
 
