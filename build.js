@@ -1,7 +1,5 @@
 var fs = require('fs'),
-    path = require('path'),
     jade = require('jade'),
-    //md = require('node-markdown'),
     marked = require('marked'),
     Class = require('neko').Class;
 
@@ -93,7 +91,7 @@ var Garden = Class(function(options) {
     },
 
     parseArticle: function(text) {
-        var title = text.match(/^[^\r\n]*/).toString();//text.substring(0, text.indexOf('\n'));
+        var title = text.match(/^[^\r\n]*/).toString();
         text = text.substring(title.length);
         title = marked(title.replace(/\#/g, '').trim()).replace(/^[^>]+>|<[^<]+$/g, '');
         text = this.toMarkdown(text);
@@ -113,7 +111,7 @@ var Garden = Class(function(options) {
     },
 
     toMarkdown: function(text) {
-        text = /*md.Markdown*/marked(text).replace(/'/g,'&#39;');
+        text = marked(text).replace(/'/g,'&#39;');
         text = text.replace(/<blockquote>/g, '<aside>').
                     replace(/<\/blockquote>/g, '</aside>');
 
@@ -190,7 +188,7 @@ var Garden = Class(function(options) {
         }
         dir = dir.join('/');
 
-        path.exists(dir, function(exists) {
+        fs.exists(dir, function(exists) {
             if (!exists) {
                 fs.mkdirSync(dir, '777');
             }

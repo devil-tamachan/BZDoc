@@ -15,7 +15,7 @@ html(lang=language)
       link(rel='stylesheet', href='../style/print.css', media='print')
 
     <!--[if lt IE 9]>
-    <script src="javascript/html5.js"></script>
+    <script src="javascript/html5shiv.js"></script>
     <![endif]-->
 
   body
@@ -77,25 +77,25 @@ html(lang=language)
 
     // Footer
     footer
-      p Copyright &copy; 2011. Built with
+      p Copyright &copy; 2013 c.mos & devil.tamachan. Built with
         | 
         a(href='http://nodejs.org/') Node.js 
         | using a
         a(href='https://github.com/visionmedia/jade/') jade 
-        | template. 
-        | Hosted by 
-        a(href='http://cramerdev.com') Cramer Development
-        .
+        | template.
 
-    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js')
+    //script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    //script(src='https://google-code-prettify.googlecode.com/svn/loader/prettify.js')
     
     - if (language === baseLanguage)
+      script(src='javascript/jquery.min.js')
       script(src='javascript/prettify.js')
-      script(src='javascript/plugin.js')
+      script(src='javascript/detectmobilebrowser.js')
       script(src='javascript/garden.js')
     
     - else
+      script(src='../javascript/jquery.min.js')
       script(src='../javascript/prettify.js')
-      script(src='../javascript/plugin.js')
+      script(src='../javascript/detectmobilebrowser.js')
       script(src='../javascript/garden.js')
 
