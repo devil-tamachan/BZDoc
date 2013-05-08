@@ -22,33 +22,37 @@ Ctrl+Tab    分割画面間の移動
 Shift+Tab   構造体表示時に、構造体とダンプ画面間の移動</code></pre>
 <hr>
 </div><div><h3>データの編集</h3>
-<pre><code>メニュー     キー    機能
+<pre><code>メニュー               キー    機能
 -------------------------------------------------------------
-             Ins     挿入／上書きモードのトグル
-             BkSp    カーソルの直前の１バイトを削除
-             Del     カーソル上の１バイトまたは選択領域を削除
-Edit-Cut     Ctrl+X  選択領域をクリップボードへコピーして削除
-Edit-Copy    Ctrl+C  選択領域をクリップボードへコピー
-Edit-Paste   Ctrl+V  クリップボードのデータをカーソル位置へ挿入
-Edit-Undo    Ctrl+Z  編集の取り消し（何回でも可能）
-Edit-ReadOnly        リードオンリモードのトグル</code></pre>
+                       Ins     挿入／上書きモードのトグル
+                       BkSp    カーソルの直前の１バイトを削除
+                       Del     カーソル上の１バイトまたは選択領域を削除
+編集(E)-切り取り(T)    Ctrl+X  選択領域をクリップボードへコピーして削除
+編集(E)-コピー(C)      Ctrl+C  選択領域をクリップボードへコピー
+編集(E)-貼り付け(P)    Ctrl+V  クリップボードのデータをカーソル位置へ挿入
+編集(E)-元に戻す(U)    Ctrl+Z  編集の取り消し（何回でも可能）
+編集(E)-リードオンリ(R)        リードオンリモードのトグル</code></pre>
 </div></article><article id="shortcut.high"><h2>応用操作</h2><div></div><div><h3>次のメニューまたはコマンドキーで、カーソルを任意の位置へジャンプしたり、データを入力できます。</h3>
-<pre><code>メニュー         キー      機能
+<pre><code>メニュー                  キー      機能
 ------------------------------
-Jump-Find...     Ctrl+F    検索ボックスで文字列／バイト数値列を入力し検索
-Jump-Find Next   F3, Enter 次の検索
-Jump-Compare               画面２分割時、２つのファイルを比較
-Jump-To...                 検索ボックスで入力したアドレスへジャンプ
-Jump-Offset                カーソル位置の byte/word/dword値 ※ を
-                           足したアドレスへジャンプ
-Jump-Return      Ctrl+R    ジャンプ前の位置へ戻る
-Jump-Mark        Ctrl+F2   カーソル位置をマーク（個数に制限はありません）
-Jump-Mark Next   F2        次のマークへジャンプ
-Edit-Enter Value           カーソル位置へデータを入力。
-                           範囲指定時は、選択領域を入力データでFILL</code></pre>
+移動(J)-検索(F)...        Ctrl+F    検索ボックスで文字列／バイト数値列
+                                    を入力し検索
+移動(J)-次を検索(N)       F3, Enter 次の検索
+移動(J)-ファイルの比較(C)           画面２分割時、２つのファイルを比較
+移動(J)-指定アドレスへ(A)...        検索ボックスで入力したアドレスへ
+                                    ジャンプ
+移動(J)-オフセットを加算(O)         カーソル位置の byte/word/dword値 ※ を
+                                    足したアドレスへジャンプ
+移動(J)-元のアドレスへ(R) Ctrl+R    ジャンプ前の位置へ戻る
+移動(J)-マーク(K)         Ctrl+F2   カーソル位置をマーク
+                                   （個数に制限はありません）
+移動(J)-次のマークへ(M)   F2        次のマークへジャンプ
+編集(E)-値の入力(E)                 カーソル位置へデータを入力。
+                                    範囲指定時は、選択領域を入力データで
+                                    埋めます。</code></pre>
 <p>※ <a href="#other.tips">byte/word/dwordの切り替え方</a></p>
-</div></article></section><section id="findbox"><!-- Introduction--><header id="findbox.intro"><h1>検索ボックス</h1></header><!-- Articles--><article id="findbox.findbox"><h2>検索ボックス</h2><div><p>ツールバー上のコンボボックスを「検索ボックス」と呼びます。ここで文字列を入力してEnterを押すと、カーソル位置以降で文字列を検索し、見つかったアドレスへジャンプします。</p>
-</div><div><h3>View-Character setメニュー</h3>
+</div></article></section><section id="findbox"><!-- Introduction--><header id="findbox.intro"><h1>検索ボックス</h1></header><!-- Articles--><article id="findbox.findbox"><h2>検索ボックス</h2><div><p>ツールバー上のコンボボックスを「検索ボックス」と呼びます。<br>文字列を入力して<code>Enter</code>を押すと、カーソル位置以降で文字列を検索し、見つかったアドレスへジャンプします。</p>
+</div><div><h3><code>表示(V)</code>-<code>文字コード(C)</code>メニュー</h3>
 <pre><code>Ascii       英大小文字を区別して検索
 Shift-JIS   英大小文字を区別しないで検索
 Unicode     ユニコードで検索
@@ -57,28 +61,29 @@ EUC         EUCコードで検索</code></pre>
 <p>文字列の先頭文字が、「？＞＜＋＃」の記号の場合は、以下の特別の処理を実行します。</p>
 <pre><code>先頭文字  機能
 -------------------------------------------------------
+#    バイト数値列を検索します。各バイトは、カンマ、スペース等で区切ります。
+     例: &quot;# 63 2e 6d 6f&quot; (0x632e6d6f を検索)
+&gt;    計算結果のアドレスへジャンプします。
+     例: &quot;&gt; 8655&quot; (0x8655 へジャンプ)
 ?    16進数の計算式を入力できます。演算子は「+-*/&amp;|^」
      演算子に優先順位はありません。左から順次演算されます。
      10進数を入力したい場合は、直前に「％」を付加します。
      演算結果は「= 16進数 (10進数)」で表示され
      、ここでEnterを打つと続けて計算式を入力できます。
-&gt;    計算結果のアドレスへジャンプします。
 +    カーソル位置に計算結果のオフセットを加えたアドレスへジャンプします。
-#    バイト数値列を検索します。各バイトは、カンマ、スペース等で区切ります。
-     例: &quot;# 63 2e 6d 6f&quot; (0x632e6d6f を検索)
 &lt;    計算結果を byte/word/dword値※ とみなして、カーソル位置に入力します。
      例: &quot;&lt; %100&quot; (カーソル位置へ100を入力)</code></pre>
 <p>※ <a href="#other.tips">byte/word/dwordの切り替え方</a></p>
 </div></article></section><section id="splitview"><!-- Introduction--><header id="splitview.intro"><h1>ダブルウィンドウ</h1></header><!-- Articles--><article id="splitview.splitview"><h2>ダブルウィンドウ</h2><div><p>BZは、画面を２分割し、２つのファイルを同時に表示できます。</p>
 </div><div><h3>画面を分割</h3>
-<p><code>View</code>-<code>Split Horizontally</code>/<code>Vertically</code>メニューで、窓を横／縦に２分割します。この時、開いているファイルは複製されます。<br>１つのファイルを２つのビューで表示するのではなく、内部的に二つのファイル（ドキュメント）が存在していることになります。</p>
+<p><code>表示(V)</code>-<code>上下に分割(H)</code>/<code>左右に分割(V)</code>メニューで、窓を<code>縦</code>/<code>横</code>に２分割します。この時、開いているファイルは複製されます。<br>１つのファイルを２つのビューで表示するのではなく、内部的に二つのファイル（ドキュメント）が存在していることになります。</p>
 </div><div><h3>アクティブビュー</h3>
 <p><code>マウスクリック</code>または<code>Ctrl+Tab</code>で、アクティブなビューを切り換えられます。</p>
 </div><div><h3>ファイルを開く</h3>
 <p>アクティブなビューにファイルが表示されます。。</p>
 </div><div><h3>便利な比較機能</h3>
 <h4>メニューで比較</h4>
-<p><code>移動</code>-<code>ファイルの比較</code></p>
+<p><code>移動(J)</code>-<code>ファイルの比較(C)</code></p>
 <h4>検索ボタンで比較</h4>
 <p>検索ボックスが空の状態で、<code>次の検索</code>ボタン (右) を押す。</p>
 <h4>検索開始</h4>
@@ -116,7 +121,7 @@ EUC         EUCコードで検索</code></pre>
 
   File Mappingで開く場合のメモリ空間(View)のサイズは、ファイル全体をMapして
 失敗した場合には、[高度な設定]のViewサイズ(初期状態で64MB)になります。</code></pre>
-</div></article></section><section id="subviews"><!-- Introduction--><header id="subviews.intro"><h1>各種サブビュー</h1></header><!-- Articles--><article id="subviews.bmpview"><h2>ビットマップビュー</h2><div><p><code>View</code>-<code>Bitmap View</code>メニューを実行すると、ファイル全体をビットマップデータとみなして、左側へ表示します。ファイルの値に応じてカラーリングされます。</p>
+</div></article></section><section id="subviews"><!-- Introduction--><header id="subviews.intro"><h1>各種サブビュー</h1></header><!-- Articles--><article id="subviews.bmpview"><h2>ビットマップビュー</h2><div><p><code>表示(V)</code>-<code>ビットマップ表示(B)</code>メニューを実行すると、ファイル全体をビットマップデータとみなして、左側へ表示します。ファイルの値に応じてカラーリングされます。</p>
 <p>ビットマップ上でクリックすると、カーソルはクリック位置に対応するアドレスへジャンプします。
 この機能は、大きな実行ファイル中で、文字列プールの場所を探す時に便利です。</p>
 <p>マウスの右クリックで、ビットマップの表示を変更するメニューが開きます。</p>
@@ -137,7 +142,7 @@ EUC         EUCコードで検索</code></pre>
 </ul>
 <hr>
 </div></article><article id="subviews.structview"><h2>構造体ビュー</h2><div></div><div><h3>ビューの表示</h3>
-<p><code>View</code>-<code>Structure View</code>メニューで、構造体ビューが表示されます。</p>
+<p><code>表示(V)</code>-<code>構造体表示(U)</code>メニューで、構造体ビューが表示されます。</p>
 </div><div><h3>操作</h3>
 <p>「Structures:」リストの中から表示したい構造体名を選び、次に構造体の先頭アドレスをダブルクリックすると、「Members:」リストに、カーソル位置からのデータを構造体のメンバとして表示します。
 「Members:」リスト上の各メンバをクリックすると、そのデータの位置へカーソルが移動します。さらに、メンバをダブルクリックすると、検索ボックスから新たなデータを入力できます。（リードオンリモードでは、入力できません）
@@ -186,7 +191,7 @@ BYTE  b1; /* comment2 */</code></pre>
 <li><code>Intel</code>  チェック有りでリトル・エンディアン、チェック無しでビッグエンディアン</li>
 </ul>
 </div></article><article id="subviews.zlibanalyzer"><h2>zlibアナライザー</h2><div></div><div><h3>バイナリに埋もれたzlib圧縮データを見つけ、解凍する</h3>
-<p><code>View</code>-<code>Analyzer View</code>メニューを実行すると、Zlibアナライザーを、左側へ表示します。ファイル内のzlibデータを探査、解凍できます。</p>
+<p><code>表示(V)</code>-<code>アナライザー表示(A)</code>メニューを実行すると、Zlibアナライザーを、左側へ表示します。ファイル内のzlibデータを探査、解凍できます。</p>
 </div><div><h3>対応フォーマット</h3>
 <p>探査、解凍に対応しているのは、<code>deflate (無印)</code>で圧縮されたデータのみです。<code>GZip</code>などのデータには対応しておりません。</p>
 </div><div><h3>簡易探査</h3>
@@ -201,7 +206,7 @@ BYTE  b1; /* comment2 */</code></pre>
 zlibデータの誤検知のアドレスだった場合、リストからアドレスが削除され、何も保存されません。</p>
 </div></article></section><section id="other"><!-- Introduction--><header id="other.intro"><h1>その他</h1></header><!-- Articles--><article id="other.tips"><h2><code>Tips</code></h2><div><ul>
 <li>マウス中ボタンを押すと、現在のカレットへ飛ぶ</li>
-<li>マウスの左ボタンをダブルクリックすると、ステータスバーに表示されるカーソル位置のデータ長が、<code>byte</code>/<code>word</code>/<code>dword</code>と順次切り変わります。<br>ステータスバーのこのペインを直接クリックしても切り変えられます。<code>Jump-Offset</code>および<code>Edit</code>-<code>Enter Value</code>メニューは、このデータ長を元に実行されます。</li>
+<li>マウスの左ボタンをダブルクリックすると、ステータスバーに表示されるカーソル位置のデータ長が、<code>byte</code>/<code>word</code>/<code>dword</code>と順次切り変わります。<br>ステータスバーのこのペインを直接クリックしても切り変えられます。<code>移動(J)</code>-<code>オフセットを加算(O)</code>および<code>編集(E)</code>-<code>値の入力(E)</code>メニューは、このデータ長を元に実行されます。</li>
 </ul>
 </div></article></section><section id="specialthanks"><!-- Introduction--><header id="specialthanks.intro"><h1>Special Thanks</h1></header><!-- Articles--><article id="specialthanks.specialthanks"><h2>Special Thanks</h2><div><h4>Binary Editor BZ - original version -</h4>
 <ul>
@@ -224,7 +229,7 @@ zlibデータの誤検知のアドレスだった場合、リストからアド�
 <h4>This Help (Compilers - Node.js)</h4>
 <ul>
 <li><a href="http://nodejs.org/">Node.js</a></li>
-<li><a href="https://github.com/visionmedia/jade/">Jade</a> (<code>MIT License</code>) ---     Copyright (c) 2009-2010 TJ Holowaychuk <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#116;&#106;&#x40;&#118;&#105;&#x73;&#105;&#x6f;&#110;&#45;&#x6d;&#x65;&#100;&#x69;&#97;&#x2e;&#99;&#x61;">&#116;&#106;&#x40;&#118;&#105;&#x73;&#105;&#x6f;&#110;&#45;&#x6d;&#x65;&#100;&#x69;&#97;&#x2e;&#99;&#x61;</a></li>
+<li><a href="https://github.com/visionmedia/jade/">Jade</a> (<code>MIT License</code>) ---     Copyright (c) 2009-2010 TJ Holowaychuk <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#116;&#106;&#x40;&#x76;&#105;&#115;&#x69;&#x6f;&#110;&#x2d;&#109;&#x65;&#x64;&#105;&#97;&#x2e;&#99;&#x61;">&#116;&#106;&#x40;&#x76;&#105;&#115;&#x69;&#x6f;&#110;&#x2d;&#109;&#x65;&#x64;&#105;&#97;&#x2e;&#99;&#x61;</a></li>
 <li><a href="https://github.com/chjj/">marked</a> (<code>MIT License</code>) ---    Copyright (c) 2011-2013, Christopher Jeffrey (<a href="https://github.com/chjj/"><a href="https://github.com/chjj/">https://github.com/chjj/</a></a>)</li>
 <li><a href="https://github.com/BonsaiDen/Fomatto">fomatto</a>, <a href="https://github.com/BonsaiDen/neko.js">neko</a> (<code>MIT License</code>) ---    Copyright (c) 2010 Ivo Wetzel.</li>
 </ul>
