@@ -9,59 +9,56 @@
             "articles": []
         },
         {
-            "title": "基本操作",
-            "dir": "basic",
+            "title": "ショートカット操作",
+            "dir": "shortcut",
             "articles": [
-                "cursor"
+                "basic",
+                "high"
             ]
         },
         {
-            "title": "オブジェクト",
-            "dir": "object",
+            "title": "検索ボックス",
+            "dir": "findbox",
             "articles": [
-                "general",
-                "prototype",
-                "hasownproperty",
-                "forinloop"
+                "findbox"
             ]
         },
         {
-            "title": "関数",
-            "dir": "function",
+            "title": "ダブルウィンドウ",
+            "dir": "splitview",
             "articles": [
-                "general",
-                "this",
-                "closures",
-                "arguments",
-                "constructors",
-                "scopes"
+                "splitview"
             ]
         },
         {
-            "title": "型",
-            "dir": "types",
+            "title": "ファイルマッピング",
+            "dir": "filemapping",
             "articles": [
-                "equality",
-                "typeof",
-                "instanceof",
-                "casting"
+                "filemapping"
             ]
         },
         {
-            "title": "コア",
-            "dir": "core",
+            "title": "各種サブビュー",
+            "dir": "subviews",
             "articles": [
-                "eval",
-                "undefined",
-                "semicolon",
-                "delete"
+                "bmpview",
+                "structview",
+                "inspectview",
+                "zlibanalyzer"
             ]
         },
         {
             "title": "その他",
             "dir": "other",
             "articles": [
-                "timeouts"
+                "tips"
+            ]
+        },
+        {
+            "title": "Special Thanks",
+            "dir": "specialthanks",
+            "articles": [
+                "specialthanks"
             ]
         }
     ]
