@@ -55,6 +55,13 @@
             ]
         },
         {
+            "title": "CHANGELOG",
+            "dir": "changelog",
+            "articles": [
+                "changelog"
+            ]
+        },
+        {
             "title": "Special Thanks",
             "dir": "specialthanks",
             "articles": [
