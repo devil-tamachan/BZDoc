@@ -11,6 +11,13 @@
  - SHIROUZU Hiroaki
  - nobumasa.tamaoki
 
+#### Libraries
+ - [Zlib][13] (`zlib license`) ---    Copyright (C) 1995-2013 Jean-loup Gailly and Mark Adler
+ - [kb976038.h (2012/07/14)][14] (`New BSD License`) ---    Copyright (C) 2010 Apple Inc. All rights reserved.
+
+#### Installer
+ - [NSIS Installer][15] ---    Copyright (C) 1999-2013 Contributors
+
 #### This Help (Main - css, build script, etc...)
  - [JavaScript Garden][3] (`MIT License`) ---    Copyright (c) 2010 Ivo Wetzel.
 
@@ -39,3 +46,6 @@
 [10]: http://detectmobilebrowser.com/
 [11]: https://github.com/aFarkas/html5shiv
 [12]: http://code.google.com/p/google-code-prettify/
+[13]: http://zlib.net/
+[14]: http://src.chromium.org/multivm/trunk/webkit/Source/WebKit2/WebProcess/WebKitMain.cpp
+[15]: http://nsis.sourceforge.net/
