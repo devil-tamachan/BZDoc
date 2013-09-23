@@ -5,6 +5,7 @@
 
 #### Contribute
  - doraneko (`BZ1.06`)
+ - tettsu   (Bugfix for Inspector View)
 
 #### Bug-report
  - satou.takashi
