@@ -1,3 +1,6 @@
+
+![Binary Editor BZ 1.9.X](image/bzscratch6.png)
+
 ## はじめに
 
 **Binary Editor BZ** は、シンプルなバイナリエディタです。次のような特長があります。
