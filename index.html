@@ -207,8 +207,10 @@ zlibデータの誤検知のアドレスだった場合、リストからアド�
 <li>マウス中ボタンを押すと、現在のカレットへ飛ぶ</li>
 <li>マウスの左ボタンをダブルクリックすると、ステータスバーに表示されるカーソル位置のデータ長が、<code>byte</code>/<code>word</code>/<code>dword</code>と順次切り変わります。<br>ステータスバーのこのペインを直接クリックしても切り変えられます。<code>移動(J)</code>-<code>オフセットを加算(O)</code>および<code>編集(E)</code>-<code>値の入力(E)</code>メニューは、このデータ長を元に実行されます。</li>
 </ul>
-</div></article></section><section id="changelog"><!-- Introduction--><header id="changelog.intro"><h1>CHANGELOG</h1></header><!-- Articles--><article id="changelog.changelog"><h2>CHANGELOG</h2><div></div><div><h3>1.8.5 2013/  /   (devil.tamachan@gmail.com)</h3>
+</div></article></section><section id="changelog"><!-- Introduction--><header id="changelog.intro"><h1>CHANGELOG</h1></header><!-- Articles--><article id="changelog.changelog"><h2>CHANGELOG</h2><div></div><div><h3>1.9.0 2013/11/08 (devil.tamachan@gmail.com)</h3>
 <ul>
+<li>(修正) インスペクタのfloatがバグってる（Special Thanks!: tettsu）</li>
+<li>(追加) SuperFileCon (ファイル操作ライブラリ) 搭載 (メモリ使用節約　超高速編集/保存(挿入/削除)　Redo実装 ファイルマッピングで不可能だった挿入/削除　保存時以外のクラッシュ時のデータ保護) </li>
 <li>(修正) ビュー分割時にカーソル位置が復元されないバグ</li>
 <li>(追加) ファイルを書込可で開けない時、Readonlyで再度開き直す機能</li>
 <li>(追加) Splitter用アイコンリソース追加</li>
@@ -221,6 +223,7 @@ zlibデータの誤検知のアドレスだった場合、リストからアド�
 <li>(追加) バイト/文字列検索にQuickSearch法を実装</li>
 <li>(修正) UTF8だと先頭一文字しかマッチしない問題修正</li>
 <li>(修正) ファイルマッピングで開かれた巨大なファイルの比較が失敗するバグ修正</li>
+<li>(修正) 一部バイナリ(0xAAAA....(30MB続く))でShift-JIS表示すると半フリーズする2</li>
 </ul>
 </div><div><h3>1.8.4 2013/06/14 (devil.tamachan@gmail.com)</h3>
 <ul>
@@ -419,7 +422,7 @@ zlibデータの誤検知のアドレスだった場合、リストからアド�
 <h4>This Help (Compilers - Node.js)</h4>
 <ul>
 <li><a href="http://nodejs.org/">Node.js</a></li>
-<li><a href="https://github.com/visionmedia/jade/">Jade</a> (<code>MIT License</code>) ---     Copyright (c) 2009-2010 TJ Holowaychuk <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#x3a;&#116;&#x6a;&#x40;&#118;&#105;&#x73;&#105;&#x6f;&#x6e;&#x2d;&#109;&#101;&#x64;&#x69;&#97;&#46;&#99;&#97;">&#116;&#x6a;&#x40;&#118;&#105;&#x73;&#105;&#x6f;&#x6e;&#x2d;&#109;&#101;&#x64;&#x69;&#97;&#46;&#99;&#97;</a></li>
+<li><a href="https://github.com/visionmedia/jade/">Jade</a> (<code>MIT License</code>) ---     Copyright (c) 2009-2010 TJ Holowaychuk <a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#x74;&#x6a;&#x40;&#118;&#x69;&#115;&#105;&#111;&#110;&#45;&#109;&#x65;&#100;&#105;&#97;&#46;&#99;&#97;">&#x74;&#x6a;&#x40;&#118;&#x69;&#115;&#105;&#111;&#110;&#45;&#109;&#x65;&#100;&#105;&#97;&#46;&#99;&#97;</a></li>
 <li><a href="https://github.com/chjj/">marked</a> (<code>MIT License</code>) ---    Copyright (c) 2011-2013, Christopher Jeffrey (<a href="https://github.com/chjj/"><a href="https://github.com/chjj/">https://github.com/chjj/</a></a>)</li>
 <li><a href="https://github.com/BonsaiDen/Fomatto">fomatto</a>, <a href="https://github.com/BonsaiDen/neko.js">neko</a> (<code>MIT License</code>) ---    Copyright (c) 2010 Ivo Wetzel.</li>
 </ul>
