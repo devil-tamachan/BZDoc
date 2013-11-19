@@ -11,6 +11,7 @@
  - satou.takashi
  - SHIROUZU Hiroaki
  - nobumasa.tamaoki
+ - k.yukihiko
 
 #### Libraries
  - [Zlib][13] (`zlib license`) ---    Copyright (C) 1995-2013 Jean-loup Gailly and Mark Adler
