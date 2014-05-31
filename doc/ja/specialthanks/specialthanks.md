@@ -6,12 +6,19 @@
 #### Contribute
  - doraneko (`BZ1.06`)
  - tettsu   (Bugfix for Inspector View)
+ - tanda.sat (Bugfix for English resource)
 
 #### Bug-report
  - satou.takashi
  - SHIROUZU Hiroaki
  - nobumasa.tamaoki
  - k.yukihiko
+ - gnanas
+ - takamitsu
+ 
+#### Feature-request
+ - g1e2n04
+
 
 #### Libraries
  - [Zlib][13] (`zlib license`) ---    Copyright (C) 1995-2013 Jean-loup Gailly and Mark Adler
