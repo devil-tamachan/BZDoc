@@ -204,7 +204,19 @@ zlibデータの誤検知のアドレスだった場合、リストからアド�
 <li>マウス中ボタンを押すと、現在のカレットへ飛ぶ</li>
 <li>マウスの左ボタンをダブルクリックすると、ステータスバーに表示されるカーソル位置のデータ長が、<code>byte</code>/<code>word</code>/<code>dword</code>と順次切り変わります。<br>ステータスバーのこのペインを直接クリックしても切り変えられます。<code>移動(J)</code>-<code>オフセットを加算(O)</code>および<code>編集(E)</code>-<code>値の入力(E)</code>メニューは、このデータ長を元に実行されます。</li>
 </ul>
-</div></article></section><section id="changelog"><!-- Introduction--><header id="changelog.intro"><h1>CHANGELOG</h1></header><!-- Articles--><article id="changelog.changelog"><h2>CHANGELOG</h2><div></div><div><h3>1.9.2 2013/11/20 (devil.tamachan@gmail.com)</h3>
+</div></article></section><section id="changelog"><!-- Introduction--><header id="changelog.intro"><h1>CHANGELOG</h1></header><!-- Articles--><article id="changelog.changelog"><h2>CHANGELOG</h2><div></div><div><h3>1.9.3 2014/05/31 (devil.tamachan@gmail.com)</h3>
+<ul>
+<li>(修正) Issue 27 スクロールバー操作で落ちます (Special Thanks: gnanas)</li>
+<li>(修正) Issue 30 UTF8の日本語表示がおかしい (Special Thanks! takamitsu)</li>
+<li>(追加) Issue 31 BMPビューの旧BZカラーパレットサポート (Special Thanks! g1e2n04)</li>
+<li>(追加) 4GB超ファイルに対応</li>
+<li>(追加) 完全WTL化（脱MFC）</li>
+<li>(修正) UTF16が文字化けする</li>
+<li>(修正) 新規作成 + SaveAsした場合、GetFilePath()がNULLを返す（パスが更新されない）バグ</li>
+<li>(修正) SuperFileCon: 一回で50MB以上の削除をすると、保存時にアクセス違反でクラッシュするバグ</li>
+<li>(修正) キーを押したまま入力中に表示が更新されない / HDDがガリガリする</li>
+</ul>
+</div><div><h3>1.9.2 2013/11/20 (devil.tamachan@gmail.com)</h3>
 <ul>
 <li>(修正) 挿入すると挿入点直後のデータが壊れるバグ (1.9.1で混入)</li>
 </ul>
@@ -410,6 +422,7 @@ zlibデータの誤検知のアドレスだった場合、リストからアド�
 <ul>
 <li>doraneko (<code>BZ1.06</code>)</li>
 <li>tettsu   (Bugfix for Inspector View)</li>
+<li>tanda.sat (Bugfix for English resource)</li>
 </ul>
 <h4>Bug-report</h4>
 <ul>
@@ -417,6 +430,12 @@ zlibデータの誤検知のアドレスだった場合、リストからアド�
 <li>SHIROUZU Hiroaki</li>
 <li>nobumasa.tamaoki</li>
 <li>k.yukihiko</li>
+<li>gnanas</li>
+<li>takamitsu</li>
+</ul>
+<h4>Feature-request</h4>
+<ul>
+<li>g1e2n04</li>
 </ul>
 <h4>Libraries</h4>
 <ul>
@@ -434,7 +453,7 @@ zlibデータの誤検知のアドレスだった場合、リストからアド�
 <h4>This Help (Compilers - Node.js)</h4>
 <ul>
 <li><a href="http://nodejs.org/">Node.js</a></li>
-<li><a href="https://github.com/visionmedia/jade/">Jade</a> (<code>MIT License</code>) ---     Copyright (c) 2009-2010 TJ Holowaychuk <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#116;&#x6a;&#64;&#118;&#105;&#x73;&#105;&#111;&#110;&#45;&#x6d;&#101;&#100;&#105;&#x61;&#46;&#x63;&#x61;">&#116;&#x6a;&#64;&#118;&#105;&#x73;&#105;&#111;&#110;&#45;&#x6d;&#101;&#100;&#105;&#x61;&#46;&#x63;&#x61;</a></li>
+<li><a href="https://github.com/visionmedia/jade/">Jade</a> (<code>MIT License</code>) ---     Copyright (c) 2009-2010 TJ Holowaychuk <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#116;&#106;&#64;&#x76;&#x69;&#115;&#x69;&#111;&#110;&#45;&#x6d;&#x65;&#x64;&#105;&#x61;&#x2e;&#99;&#x61;">&#116;&#106;&#64;&#x76;&#x69;&#115;&#x69;&#111;&#110;&#45;&#x6d;&#x65;&#x64;&#105;&#x61;&#x2e;&#99;&#x61;</a></li>
 <li><a href="https://github.com/chjj/">marked</a> (<code>MIT License</code>) ---    Copyright (c) 2011-2013, Christopher Jeffrey (<a href="https://github.com/chjj/"><a href="https://github.com/chjj/">https://github.com/chjj/</a></a>)</li>
 <li><a href="https://github.com/BonsaiDen/Fomatto">fomatto</a>, <a href="https://github.com/BonsaiDen/neko.js">neko</a> (<code>MIT License</code>) ---    Copyright (c) 2010 Ivo Wetzel.</li>
 </ul>
