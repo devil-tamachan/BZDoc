@@ -13,8 +13,9 @@
  - SHIROUZU Hiroaki
  - nobumasa.tamaoki
  - k.yukihiko
- - gnanas
+ - gnanashi0
  - takamitsu
+ - GooChan608
  
 #### Feature-request
  - g1e2n04
@@ -23,6 +24,7 @@
 #### Libraries
  - [Zlib][13] (`zlib license`) ---    Copyright (C) 1995-2013 Jean-loup Gailly and Mark Adler
  - [kb976038.h (2012/07/14)][14] (`New BSD License`) ---    Copyright (C) 2010 Apple Inc. All rights reserved.
+ - tree.h (New BSD License) --- Copyright 2002 Niels Provos <provos@citi.umich.edu> All rights reserved.
 
 #### Installer
  - [NSIS Installer][15] ---    Copyright (C) 1999-2013 Contributors
