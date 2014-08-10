@@ -204,7 +204,26 @@ zlibデータの誤検知のアドレスだった場合、リストからアド�
 <li>マウス中ボタンを押すと、現在のカレットへ飛ぶ</li>
 <li>マウスの左ボタンをダブルクリックすると、ステータスバーに表示されるカーソル位置のデータ長が、<code>byte</code>/<code>word</code>/<code>dword</code>と順次切り変わります。<br>ステータスバーのこのペインを直接クリックしても切り変えられます。<code>移動(J)</code>-<code>オフセットを加算(O)</code>および<code>編集(E)</code>-<code>値の入力(E)</code>メニューは、このデータ長を元に実行されます。</li>
 </ul>
-</div></article></section><section id="changelog"><!-- Introduction--><header id="changelog.intro"><h1>CHANGELOG</h1></header><!-- Articles--><article id="changelog.changelog"><h2>CHANGELOG</h2><div></div><div><h3>1.9.5 2014/07/06 (devil.tamachan@gmail.com)</h3>
+</div></article></section><section id="changelog"><!-- Introduction--><header id="changelog.intro"><h1>CHANGELOG</h1></header><!-- Articles--><article id="changelog.changelog"><h2>CHANGELOG</h2><div></div><div><h3>1.9.6 2014/08/10 (devil.tamachan@gmail.com)</h3>
+<ul>
+<li>(修正) Issue 37 ショートカットキーが効かないバグ (Spetial Thanks! gnanashi0)</li>
+<li>(修正) Issue 37 ダンプリストの保存時に入力したファイル名が反映されないバグ (Special Thanks! gnanashi0)</li>
+<li>(修正) Issue 37 検索窓のEnterキーが効かないなどのバグ (Special Thanks! gnanashi0)</li>
+<li>(追加) Issue 38 ショートカットキー追加 (Special Thanks! gnanashi0)</li>
+<li>(修正) Issue 39 分割表示の際カーソルを新しいビューへ移動 &amp; 分割表示解除時、カーソルが無いビューを削除するよう変更 (Special Thanks! gnanashi0)</li>
+<li>(修正) Issue 39 分割表示解除時、ファイルの変更が保存されないバグ (Special Thanks! gnanashi0)</li>
+<li>(追加) Issue 38 ショートカットキー追加 2 (Special Thanks! gnanashi0)</li>
+<li>(修正) Issue 41 日本語入力が出来ないバグ (Special Thanks! GooChan608)</li>
+<li>(修正) Issue 41 ステータスバーの&quot;上書/書禁&quot;の切り替えができないバグ (Special Thanks! GooChan608)</li>
+<li>(修正) &quot;指定アドレスへ&quot;, &quot;値の入力&quot;実行時のキャレット移動処理追加</li>
+<li>(修正) サブビュー無し＆左右分割の場合、左のビューのサイズが小さすぎるバグ</li>
+<li>(修正) 新アドレス表示 &amp; 削除、カットが動かないバグ修正</li>
+<li>(修正) 常に16桁で表示にもカラー表示追加</li>
+<li>(修正) Issue 40: 構造体表示が名前しか表示されないバグ</li>
+<li>(修正) Issue 43: 読み込み時リードオンリーが働いてない</li>
+<li>(追加) Issue 42: 右クリックメニューがほしい</li>
+</ul>
+</div><div><h3>1.9.5 2014/07/06 (devil.tamachan@gmail.com)</h3>
 <ul>
 <li>(修正) Issue 36  引数にダブルクォートされたファイル名を与えても開けない (Special Thanks: gnanas)</li>
 <li>(修正) Issue 36  ウィンドウサイズが自動調整されないバグ (Special Thanks: gnanas)</li>
@@ -471,7 +490,7 @@ zlibデータの誤検知のアドレスだった場合、リストからアド�
 <h4>This Help (Compilers - Node.js)</h4>
 <ul>
 <li><a href="http://nodejs.org/">Node.js</a></li>
-<li><a href="https://github.com/visionmedia/jade/">Jade</a> (<code>MIT License</code>) ---     Copyright (c) 2009-2010 TJ Holowaychuk <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#116;&#x6a;&#64;&#x76;&#105;&#x73;&#x69;&#111;&#110;&#x2d;&#x6d;&#101;&#100;&#x69;&#x61;&#46;&#99;&#97;">&#116;&#x6a;&#64;&#x76;&#105;&#x73;&#x69;&#111;&#110;&#x2d;&#x6d;&#101;&#100;&#x69;&#x61;&#46;&#99;&#97;</a></li>
+<li><a href="https://github.com/visionmedia/jade/">Jade</a> (<code>MIT License</code>) ---     Copyright (c) 2009-2010 TJ Holowaychuk <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#x74;&#x6a;&#64;&#118;&#105;&#x73;&#105;&#x6f;&#x6e;&#45;&#x6d;&#x65;&#100;&#105;&#x61;&#x2e;&#x63;&#97;">&#x74;&#x6a;&#64;&#118;&#105;&#x73;&#105;&#x6f;&#x6e;&#45;&#x6d;&#x65;&#100;&#105;&#x61;&#x2e;&#x63;&#97;</a></li>
 <li><a href="https://github.com/chjj/">marked</a> (<code>MIT License</code>) ---    Copyright (c) 2011-2013, Christopher Jeffrey (<a href="https://github.com/chjj/"><a href="https://github.com/chjj/">https://github.com/chjj/</a></a>)</li>
 <li><a href="https://github.com/BonsaiDen/Fomatto">fomatto</a>, <a href="https://github.com/BonsaiDen/neko.js">neko</a> (<code>MIT License</code>) ---    Copyright (c) 2010 Ivo Wetzel.</li>
 </ul>
