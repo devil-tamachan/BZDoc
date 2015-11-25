@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="ja"><head><title>Binary Editor BZ</title><meta charset="utf-8"><meta name="description" content="Binary Editor BZのヘルプ"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="style/garden.css" media="all"><link rel="stylesheet" href="style/print.css" media="print"><!--[if lt IE 9]>
 <script src="javascript/html5shiv.js"></script>
 <![endif]-->
-</head><body><!-- Navigation--><nav id="nav_main"><div><ul><li class="active"><a href="/JavaScript-Garden/" title="Binary Editor BZ in Japanese">ja</a></li></ul><a id="top" href="#intro" title="Back to top">#top</a><a id="hide_menu" class="tablet">Hide Menu</a></div><ul><li class="nav_intro"><h1><a href="#intro"> </a></h1><ul></ul></li><li class="nav_shortcut"><h1><a href="#shortcut">ショートカット操作</a></h1><ul><li><a href="#shortcut.basic">基本操作</a></li><li><a href="#shortcut.high">応用操作</a></li></ul></li><li class="nav_findbox"><h1><a href="#findbox">検索ボックス</a></h1><ul><li><a href="#findbox.findbox">検索ボックス</a></li></ul></li><li class="nav_splitview"><h1><a href="#splitview">ダブルウィンドウ</a></h1><ul><li><a href="#splitview.splitview">ダブルウィンドウ</a></li></ul></li><li class="nav_sfc"><h1><a href="#sfc">SuperFileCon</a></h1><ul><li><a href="#sfc.sfc">SuperFileCon (汎用ファイル操作ライブラリ)</a></li></ul></li><li class="nav_subviews"><h1><a href="#subviews">各種サブビュー</a></h1><ul><li><a href="#subviews.bmpview">ビットマップビュー</a></li><li><a href="#subviews.structview">構造体ビュー</a></li><li><a href="#subviews.inspectview">インスペクタビュー</a></li><li><a href="#subviews.zlibanalyzer">zlibアナライザー</a></li></ul></li><li class="nav_other"><h1><a href="#other">その他</a></h1><ul><li><a href="#other.tips"><code>Tips</code></a></li></ul></li><li class="nav_changelog"><h1><a href="#changelog">CHANGELOG</a></h1><ul><li><a href="#changelog.changelog">CHANGELOG</a></li></ul></li><li class="nav_specialthanks"><h1><a href="#specialthanks">Special Thanks</a></h1><ul><li><a href="#specialthanks.specialthanks">Special Thanks</a></li></ul></li></ul></nav><!-- Mobile navigation--><nav id="nav_mobile"><a id="nav_prev_section" href="#">prev section<span class="nav_section_name">section name</span></a><a id="nav_next_section" href="#">next section<span class="nav_section_name">section name</span></a><a id="show_menu">show menu</a></nav><!-- Sections--><section id="intro"><!-- Introduction--><header id="intro.intro"><h1> </h1><div><p><img src="image/bzscratch6.png" alt="Binary Editor BZ 1.9.X"></p>
+</head><body><!-- Navigation--><nav id="nav_main"><div><ul><li class="active"><a href="/JavaScript-Garden/" title="Binary Editor BZ in Japanese">ja</a></li></ul><a id="top" href="#intro" title="Back to top">#top</a><a id="hide_menu" class="tablet">Hide Menu</a></div><ul><li class="nav_intro"><h1><a href="#intro"> </a></h1><ul></ul></li><li class="nav_shortcut"><h1><a href="#shortcut">ショートカット操作</a></h1><ul><li><a href="#shortcut.basic">基本操作</a></li><li><a href="#shortcut.high">応用操作</a></li></ul></li><li class="nav_findbox"><h1><a href="#findbox">検索ボックス</a></h1><ul><li><a href="#findbox.findbox">検索ボックス</a></li></ul></li><li class="nav_splitview"><h1><a href="#splitview">ダブルウィンドウ</a></h1><ul><li><a href="#splitview.splitview">ダブルウィンドウ</a></li></ul></li><li class="nav_sfc"><h1><a href="#sfc">SuperFileCon</a></h1><ul><li><a href="#sfc.sfc">SuperFileCon (汎用ファイル操作ライブラリ)</a></li></ul></li><li class="nav_subviews"><h1><a href="#subviews">各種サブビュー</a></h1><ul><li><a href="#subviews.bmpview">ビットマップビュー</a></li><li><a href="#subviews.structview">構造体ビュー</a></li><li><a href="#subviews.inspectview">インスペクタビュー</a></li><li><a href="#subviews.zlibanalyzer">zlibアナライザー</a></li></ul></li><li class="nav_portable"><h1><a href="#portable">ポータブルモード</a></h1><ul><li><a href="#portable.portable">ポータブルモード</a></li></ul></li><li class="nav_other"><h1><a href="#other">その他</a></h1><ul><li><a href="#other.tips"><code>Tips</code></a></li></ul></li><li class="nav_changelog"><h1><a href="#changelog">CHANGELOG</a></h1><ul><li><a href="#changelog.changelog">CHANGELOG</a></li></ul></li><li class="nav_specialthanks"><h1><a href="#specialthanks">Special Thanks</a></h1><ul><li><a href="#specialthanks.specialthanks">Special Thanks</a></li></ul></li></ul></nav><!-- Mobile navigation--><nav id="nav_mobile"><a id="nav_prev_section" href="#">prev section<span class="nav_section_name">section name</span></a><a id="nav_next_section" href="#">next section<span class="nav_section_name">section name</span></a><a id="show_menu">show menu</a></nav><!-- Sections--><section id="intro"><!-- Introduction--><header id="intro.intro"><h1> </h1><div><p><img src="image/bzscratch6.png" alt="Binary Editor BZ 1.9.X"></p>
 <h2>はじめに</h2>
 <p><strong>Binary Editor BZ</strong> は、シンプルなバイナリエディタです。次のような特長があります。</p>
 <ul>
@@ -200,11 +200,34 @@ BYTE  b1; /* comment2 */</code></pre>
 <p>探査結果のリストを選択して、Saveで単体を解凍することもできます。
 正しいzlibデータのアドレスだった場合、解凍データが保存フォルダへ保存されます。
 zlibデータの誤検知のアドレスだった場合、リストからアドレスが削除され、何も保存されません。</p>
+</div></article></section><section id="portable"><!-- Introduction--><header id="portable.intro"><h1>ポータブルモード</h1></header><!-- Articles--><article id="portable.portable"><h2>ポータブルモード</h2><div></div><div><h3>USBメモリなどに入れて持ち運べる！</h3>
+<pre><code>EnablePortableMode.txtがBz.exeと同じディレクトリにあると、ポータブルモードに切り替わります。</code></pre>
+</div><div><h3>レジストリへアクセスしない</h3>
+<pre><code>設定はすべてEnablePortableMode.txtへ書き込まれます。レジストリは使用しません。</code></pre>
 </div></article></section><section id="other"><!-- Introduction--><header id="other.intro"><h1>その他</h1></header><!-- Articles--><article id="other.tips"><h2><code>Tips</code></h2><div><ul>
 <li>マウス中ボタンを押すと、現在のカレットへ飛ぶ</li>
 <li>マウスの左ボタンをダブルクリックすると、ステータスバーに表示されるカーソル位置のデータ長が、<code>byte</code>/<code>word</code>/<code>dword</code>と順次切り変わります。<br>ステータスバーのこのペインを直接クリックしても切り変えられます。<code>移動(J)</code>-<code>オフセットを加算(O)</code>および<code>編集(E)</code>-<code>値の入力(E)</code>メニューは、このデータ長を元に実行されます。</li>
 </ul>
-</div></article></section><section id="changelog"><!-- Introduction--><header id="changelog.intro"><h1>CHANGELOG</h1></header><!-- Articles--><article id="changelog.changelog"><h2>CHANGELOG</h2><div></div><div><h3>1.9.6 2014/08/10 (devil.tamachan@gmail.com)</h3>
+</div></article></section><section id="changelog"><!-- Introduction--><header id="changelog.intro"><h1>CHANGELOG</h1></header><!-- Articles--><article id="changelog.changelog"><h2>CHANGELOG</h2><div></div><div><h3>1.9.7 2015/11/25 (devil.tamachan@gmail.com)</h3>
+<ul>
+<li>(修正) Issue 46: 高dpiにすると文字がはみ出る (Special Thanks! RuRuRu)</li>
+<li>(修正) Issue 47 検索で表示が真っ白になる (Special Thanks! gnanashi0)</li>
+<li>(修正) Issue 47 コンボボックスのフォントをMFC版と同じに戻した (Special Thanks! gnanashi0)</li>
+<li>(修正) Issue 47 検索ボックスでキーボードショートカットが使えないバグ (Special Thanks! gnanashi0)</li>
+<li>(修正) Issue #48 終了時に動作を停止する (Special Thanks! yu-tang)</li>
+<li>(修正) Issue #49 Ctrl-Tabでフォーカスを戻した時のキー入力 (Special Thanks! RuRuRu)</li>
+<li>(修正) ファイルの先頭へ移動がバグっていたのを修正</li>
+<li>(修正) 高dpiでボケる &amp; .manifestが正しく埋め込まれないバグ</li>
+<li>(修正) 64ビットOSだと英語リソースが読み込まれないバグ</li>
+<li>(追加) 管理者権限で開く追加</li>
+<li>(追加) UAC有効下、タイトルバーで管理者権限で実行しているか判別できるように</li>
+<li>(追加) 構造体ビューをリストビューからツリービューへ変更　＋バグ修正</li>
+<li>(追加) ポータブルモード</li>
+<li>(修正) スタックの使いすぎ修正</li>
+<li>(修正) 同期スクロールが効かないバグ</li>
+<li>(修正) ファイルを開くのを失敗した時メッセージボックスが２度出る</li>
+</ul>
+</div><div><h3>1.9.6 2014/08/10 (devil.tamachan@gmail.com)</h3>
 <ul>
 <li>(修正) Issue 37 ショートカットキーが効かないバグ (Spetial Thanks! gnanashi0)</li>
 <li>(修正) Issue 37 ダンプリストの保存時に入力したファイル名が反映されないバグ (Special Thanks! gnanashi0)</li>
@@ -479,7 +502,7 @@ zlibデータの誤検知のアドレスだった場合、リストからアド�
 <ul>
 <li><a href="http://zlib.net/">Zlib</a> (<code>zlib license</code>) ---    Copyright (C) 1995-2013 Jean-loup Gailly and Mark Adler</li>
 <li><a href="http://src.chromium.org/multivm/trunk/webkit/Source/WebKit2/WebProcess/WebKitMain.cpp">kb976038.h (2012/07/14)</a> (<code>New BSD License</code>) ---    Copyright (C) 2010 Apple Inc. All rights reserved.</li>
-<li>tree.h (New BSD License) --- Copyright 2002 Niels Provos <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#112;&#x72;&#111;&#118;&#111;&#115;&#64;&#x63;&#105;&#116;&#x69;&#x2e;&#117;&#x6d;&#x69;&#99;&#104;&#46;&#x65;&#100;&#117;">&#112;&#x72;&#111;&#118;&#111;&#115;&#64;&#x63;&#105;&#116;&#x69;&#x2e;&#117;&#x6d;&#x69;&#99;&#104;&#46;&#x65;&#100;&#117;</a> All rights reserved.</li>
+<li>tree.h (New BSD License) --- Copyright 2002 Niels Provos <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#x70;&#x72;&#x6f;&#118;&#111;&#115;&#64;&#x63;&#105;&#x74;&#105;&#46;&#117;&#109;&#x69;&#99;&#104;&#x2e;&#101;&#x64;&#x75;">&#x70;&#x72;&#x6f;&#118;&#111;&#115;&#64;&#x63;&#105;&#x74;&#105;&#46;&#117;&#109;&#x69;&#99;&#104;&#x2e;&#101;&#x64;&#x75;</a> All rights reserved.</li>
 </ul>
 <h4>Installer</h4>
 <ul>
@@ -492,7 +515,7 @@ zlibデータの誤検知のアドレスだった場合、リストからアド�
 <h4>This Help (Compilers - Node.js)</h4>
 <ul>
 <li><a href="http://nodejs.org/">Node.js</a></li>
-<li><a href="https://github.com/visionmedia/jade/">Jade</a> (<code>MIT License</code>) ---     Copyright (c) 2009-2010 TJ Holowaychuk <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#x74;&#x6a;&#x40;&#x76;&#x69;&#x73;&#105;&#111;&#x6e;&#x2d;&#109;&#101;&#x64;&#x69;&#97;&#46;&#x63;&#x61;">&#x74;&#x6a;&#x40;&#x76;&#x69;&#x73;&#105;&#111;&#x6e;&#x2d;&#109;&#101;&#x64;&#x69;&#97;&#46;&#x63;&#x61;</a></li>
+<li><a href="https://github.com/visionmedia/jade/">Jade</a> (<code>MIT License</code>) ---     Copyright (c) 2009-2010 TJ Holowaychuk <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#116;&#x6a;&#64;&#x76;&#105;&#115;&#x69;&#111;&#110;&#45;&#x6d;&#x65;&#100;&#105;&#97;&#46;&#x63;&#x61;">&#116;&#x6a;&#64;&#x76;&#105;&#115;&#x69;&#111;&#110;&#45;&#x6d;&#x65;&#100;&#105;&#97;&#46;&#x63;&#x61;</a></li>
 <li><a href="https://github.com/chjj/">marked</a> (<code>MIT License</code>) ---    Copyright (c) 2011-2013, Christopher Jeffrey (<a href="https://github.com/chjj/"><a href="https://github.com/chjj/">https://github.com/chjj/</a></a>)</li>
 <li><a href="https://github.com/BonsaiDen/Fomatto">fomatto</a>, <a href="https://github.com/BonsaiDen/neko.js">neko</a> (<code>MIT License</code>) ---    Copyright (c) 2010 Ivo Wetzel.</li>
 </ul>
