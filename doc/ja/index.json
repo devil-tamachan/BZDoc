@@ -48,6 +48,13 @@
             ]
         },
         {
+            "title": "ポータブルモード",
+            "dir": "portable",
+            "articles": [
+                "portable"
+            ]
+        },
+        {
             "title": "その他",
             "dir": "other",
             "articles": [
