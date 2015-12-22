@@ -25,6 +25,8 @@
  - [Zlib][13] (`zlib license`) ---    Copyright (C) 1995-2013 Jean-loup Gailly and Mark Adler
  - [kb976038.h (2012/07/14)][14] (`New BSD License`) ---    Copyright (C) 2010 Apple Inc. All rights reserved.
  - tree.h (New BSD License) --- Copyright 2002 Niels Provos <provos@citi.umich.edu> All rights reserved.
+ - [hsv.c/.h (MIT License)][16] --- Copyright (c) 2013 Martin Mitas
+ - [CTreeListView.h (商用不可ライセンス)][17] --- Copyright (c) 2001-2005 Bjarke Viksoe.
 
 #### Installer
  - [NSIS Installer][15] ---    Copyright (C) 1999-2013 Contributors
@@ -60,3 +62,5 @@
 [13]: http://zlib.net/
 [14]: http://src.chromium.org/multivm/trunk/webkit/Source/WebKit2/WebProcess/WebKitMain.cpp
 [15]: http://nsis.sourceforge.net/
+[16]: https://gist.github.com/mity/6034000
+[17]: https://www.viksoe.dk/code/treelistview.htm
