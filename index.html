@@ -137,6 +137,15 @@ EUC         EUCコードで検索</code></pre>
 <li><code>32bit color</code> X8R8G8B8 (Xは未使用スキップ) 4bytes/dot</li>
 </ul>
 <hr>
+</div><div><h3>カスタムパレット</h3>
+<p><img src="http://i.imgur.com/wQJuX1w.png" alt=""></p>
+<ul>
+<li>パレットのサンプルはPallets.zip、またはポータブル版をご覧ください(中身は一緒)</li>
+<li>ファイルの置き場所は、メニュー → ツール → カスタムパレットの編集 をクリックすると保存フォルダが開きます</li>
+<li>インストーラー版は%APPDATA%\BzEditor\Pallets, ポータブル版はBz.exeのあるフォルダ下、Palletsフォルダ</li>
+<li>アルファ値も使えます。上の行から１行ずつ描画</li>
+</ul>
+<hr>
 </div></article><article id="subviews.structview"><h2>構造体ビュー</h2><div></div><div><h3>ビューの表示</h3>
 <p><code>表示(V)</code>-<code>構造体表示(U)</code>メニューで、構造体ビューが表示されます。</p>
 </div><div><h3>操作</h3>
@@ -208,7 +217,34 @@ zlibデータの誤検知のアドレスだった場合、リストからアド�
 <li>マウス中ボタンを押すと、現在のカレットへ飛ぶ</li>
 <li>マウスの左ボタンをダブルクリックすると、ステータスバーに表示されるカーソル位置のデータ長が、<code>byte</code>/<code>word</code>/<code>dword</code>と順次切り変わります。<br>ステータスバーのこのペインを直接クリックしても切り変えられます。<code>移動(J)</code>-<code>オフセットを加算(O)</code>および<code>編集(E)</code>-<code>値の入力(E)</code>メニューは、このデータ長を元に実行されます。</li>
 </ul>
-</div></article></section><section id="changelog"><!-- Introduction--><header id="changelog.intro"><h1>CHANGELOG</h1></header><!-- Articles--><article id="changelog.changelog"><h2>CHANGELOG</h2><div></div><div><h3>1.9.8 2015/12/22 (devil.tamachan@gmail.com)</h3>
+</div></article></section><section id="changelog"><!-- Introduction--><header id="changelog.intro"><h1>CHANGELOG</h1></header><!-- Articles--><article id="changelog.changelog"><h2>CHANGELOG</h2><div></div><div><h3>1.9.8.5 2016/02/19 (devil.tamachan@gmail.com)</h3>
+<ul>
+<li>(追加) カスタムパレット(.txt形式) <a href="http://imgur.com/wQJuX1w">http://imgur.com/wQJuX1w</a></li>
+<li>(修正) ポータブル版設定ファイルの色表記を#AABBGGRR→#RRGGBBAAにバグ修正</li>
+</ul>
+</div><div><h3>1.9.8.4 2016/01/09 (devil.tamachan@gmail.com)</h3>
+<ul>
+<li>(修正) 引数なしだとエラー</li>
+<li>(追加) ビットマップビューのカスタムパレット機能（AzPainter2パレット(.apl)ファイル対応）</li>
+</ul>
+</div><div><h3>1.9.8.3 2015/12/31 (devil.tamachan@gmail.com)</h3>
+<ul>
+<li>(修正) 高dpiでサイドバー、ミニツールバーの表示が崩れるバグ (Special Thanks! RuRuRu)</li>
+<li>(修正) ミニツールバー / 引数 / ウィンドウ自動調整 のバグ修正</li>
+<li>(追加) ミニツールバーにサイズ項目追加</li>
+</ul>
+</div><div><h3>1.9.8.2 2015/12/24 (devil.tamachan@gmail.com)</h3>
+<ul>
+<li>(修正) ミニツールバーをオン・オフすると例外で死ぬバグ (Special Thanks! RuRuRu)</li>
+<li>(修正) ミニツールバーで操作したあと、エディット画面にフォーカスが戻るように修正</li>
+</ul>
+</div><div><h3>1.9.8.1 2015/12/23 (devil.tamachan@gmail.com)</h3>
+<ul>
+<li>(修正) 起動時にサブビューが有効だと例外で死ぬ</li>
+<li>(修正) サブビュー/分割時にウィンドウサイズの自動調整がされない</li>
+<li>(修正) BZViewの自動サイズ調整の値を調整</li>
+</ul>
+</div><div><h3>1.9.8 2015/12/22 (devil.tamachan@gmail.com)</h3>
 <ul>
 <li>(追加) ミニツールバー</li>
 <li>(修正) 同期スクロールが有効時、ホイールスクロールだとズレる</li>
@@ -510,7 +546,7 @@ zlibデータの誤検知のアドレスだった場合、リストからアド�
 <ul>
 <li><a href="http://zlib.net/">Zlib</a> (<code>zlib license</code>) ---    Copyright (C) 1995-2013 Jean-loup Gailly and Mark Adler</li>
 <li><a href="http://src.chromium.org/multivm/trunk/webkit/Source/WebKit2/WebProcess/WebKitMain.cpp">kb976038.h (2012/07/14)</a> (<code>New BSD License</code>) ---    Copyright (C) 2010 Apple Inc. All rights reserved.</li>
-<li>tree.h (New BSD License) --- Copyright 2002 Niels Provos <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#112;&#x72;&#111;&#118;&#x6f;&#x73;&#x40;&#x63;&#x69;&#x74;&#105;&#46;&#117;&#x6d;&#x69;&#x63;&#x68;&#46;&#101;&#100;&#x75;">&#112;&#x72;&#111;&#118;&#x6f;&#x73;&#x40;&#x63;&#x69;&#x74;&#105;&#46;&#117;&#x6d;&#x69;&#x63;&#x68;&#46;&#101;&#100;&#x75;</a> All rights reserved.</li>
+<li>tree.h (New BSD License) --- Copyright 2002 Niels Provos <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x70;&#114;&#x6f;&#x76;&#x6f;&#x73;&#x40;&#x63;&#105;&#116;&#x69;&#x2e;&#x75;&#109;&#x69;&#x63;&#104;&#x2e;&#x65;&#100;&#117;">&#x70;&#114;&#x6f;&#x76;&#x6f;&#x73;&#x40;&#x63;&#105;&#116;&#x69;&#x2e;&#x75;&#109;&#x69;&#x63;&#104;&#x2e;&#x65;&#100;&#117;</a> All rights reserved.</li>
 <li><a href="https://gist.github.com/mity/6034000">hsv.c/.h (MIT License)</a> --- Copyright (c) 2013 Martin Mitas</li>
 <li><a href="https://www.viksoe.dk/code/treelistview.htm">CTreeListView.h (���p�s���C�Z���X)</a> --- Copyright (c) 2001-2005 Bjarke Viksoe.</li>
 </ul>
@@ -525,7 +561,7 @@ zlibデータの誤検知のアドレスだった場合、リストからアド�
 <h4>This Help (Compilers - Node.js)</h4>
 <ul>
 <li><a href="http://nodejs.org/">Node.js</a></li>
-<li><a href="https://github.com/visionmedia/jade/">Jade</a> (<code>MIT License</code>) ---     Copyright (c) 2009-2010 TJ Holowaychuk <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#x74;&#x6a;&#64;&#x76;&#105;&#115;&#x69;&#x6f;&#110;&#x2d;&#109;&#101;&#100;&#x69;&#x61;&#46;&#99;&#97;">&#x74;&#x6a;&#64;&#x76;&#105;&#115;&#x69;&#x6f;&#110;&#x2d;&#109;&#101;&#100;&#x69;&#x61;&#46;&#99;&#97;</a></li>
+<li><a href="https://github.com/visionmedia/jade/">Jade</a> (<code>MIT License</code>) ---     Copyright (c) 2009-2010 TJ Holowaychuk <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#x74;&#x6a;&#x40;&#x76;&#105;&#115;&#x69;&#x6f;&#x6e;&#x2d;&#109;&#101;&#100;&#105;&#97;&#46;&#99;&#97;">&#x74;&#x6a;&#x40;&#x76;&#105;&#115;&#x69;&#x6f;&#x6e;&#x2d;&#109;&#101;&#100;&#105;&#97;&#46;&#99;&#97;</a></li>
 <li><a href="https://github.com/chjj/">marked</a> (<code>MIT License</code>) ---    Copyright (c) 2011-2013, Christopher Jeffrey (<a href="https://github.com/chjj/"><a href="https://github.com/chjj/">https://github.com/chjj/</a></a>)</li>
 <li><a href="https://github.com/BonsaiDen/Fomatto">fomatto</a>, <a href="https://github.com/BonsaiDen/neko.js">neko</a> (<code>MIT License</code>) ---    Copyright (c) 2010 Ivo Wetzel.</li>
 </ul>
